@@ -1,4 +1,4 @@
-##Project Overview
+Project Overview
 
 This project contains a comprehensive automated test suite for the Zedu REST API. It tests authentication, user management, and protected endpoints with a focus on:
 
@@ -10,7 +10,7 @@ Total Tests: 37+ covering login, registration, token validation, password reset,
 
 ---
 
-##Prerequisites
+Prerequisites
 
 Before running this project, ensure you have:
 
