@@ -1,16 +1,16 @@
-Project Overview
+##Project Overview
 
 This project contains a comprehensive automated test suite for the Zedu REST API. It tests authentication, user management, and protected endpoints with a focus on:
 
-Happy path testing — Valid inputs return expected results
-Negative testing — Invalid inputs are properly rejected
-Edge case testing — Boundary conditions and unusual inputs are handled gracefully
+1. Happy path testing Valid inputs return expected results
+2. Negative testing Invalid inputs are properly rejected
+3. Edge case testing Boundary conditions and unusual inputs are handled gracefully
 
 Total Tests: 37+ covering login, registration, token validation, password reset, and user profile endpoints.
 
 ---
 
-Prerequisites
+##Prerequisites
 
 Before running this project, ensure you have:
 
@@ -134,17 +134,17 @@ Tests for password/auth endpoints:
 
 ## Key Features
 
-No Hardcoded Credentials — All secrets are in `.env` only
+1. No Hardcoded Credentials All secrets are in `.env` only
 
-Single Login Function — `utils/auth.py` is the only place login logic exists
+2. Single Login Function `utils/auth.py` is the only place login logic exists
 
-Independent Tests - Every test can run alone
+3. Independent Tests Every test can run alone
 
-Idempotent** — Tests use `faker` to generate unique data
+4. Idempotent Tests use `faker` to generate unique data
 
-Comprehensive Assertions — Each test validates status codes, fields, data types, and values
+5. Comprehensive Assertions Each test validates status codes, fields, data types, and values
 
-Session-Scoped Token — Login happens once per test run
+6. Session-Scoped Token Login happens once per test run
 
 ---
 
@@ -158,7 +158,7 @@ All dependencies are listed in `requirements.txt` with pinned versions:
 
 1. Clone and setup:
 ```bash
-   git clone https://github.com/YOUR_USERNAME/zedu-api-tests.git
+   git clone https://github.com/workwithpaul25/DJINN_HNG_STAGE_3/
    cd zedu-api-tests
    python -m venv venv
    venv\\Scripts\\activate
