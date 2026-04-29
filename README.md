@@ -34,7 +34,7 @@ git --version
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/zedu-api-tests.git
+git clone https://github.com/workwithpaul25/DJINN_HNG_STAGE_3/
 cd zedu-api-tests
 ```
 
