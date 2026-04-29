@@ -113,7 +113,6 @@ Tests for authentication endpoints:
 - Registration with valid/invalid data
 - Missing or empty fields
 - Invalid email formats
-- SQL injection attempts
 - Edge cases
 
 ### `tests/test_users.py`
