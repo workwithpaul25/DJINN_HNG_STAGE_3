@@ -38,7 +38,6 @@ git clone https://github.com/workwithpaul25/DJINN_HNG_STAGE_3/
 cd zedu-api-tests
 ```
 
-Replace `workwithpaul25` with your actual GitHub username.
 
 2. Create and Activate Virtual Environment
 
@@ -46,12 +45,6 @@ On Windows:
 ```bash
 python -m venv venv
 venv\\Scripts\\activate
-```
-
-On Mac/Linux:
-```bash
-python -m venv venv
-source venv/bin/activate
 ```
 
 You'll know it worked when you see `(venv)` at the start of your terminal line.
@@ -153,27 +146,5 @@ All dependencies are listed in `requirements.txt` with pinned versions:
 
 ---
 
-## Notes for Evaluators
-
-1. Clone and setup:
-```bash
-   git clone https://github.com/workwithpaul25/DJINN_HNG_STAGE_3/
-   cd zedu-api-tests
-   python -m venv venv
-   venv\\Scripts\\activate
-   pip install -r requirements.txt
-```
-
-2. Add the `.env` file using credentials from the Google Doc
-
-3. Run tests:
-```bash
-   pytest tests/ -v
-```
-
-All tests should pass without modifications.
-
----
-
 Happy Testing!
-"""
+
