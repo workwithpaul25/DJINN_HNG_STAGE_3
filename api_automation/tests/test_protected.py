@@ -13,8 +13,7 @@ load_dotenv()
 
 BASE_URL = os.getenv("BASE_URL")
 
-# Pick any protected endpoint from the Zedu Swagger docs
-# Replace "/users/me" or "/users" with the actual protected endpoint
+
 PROTECTED_ENDPOINT = f"{BASE_URL}/users/me"
 
 

@@ -1,12 +1,3 @@
-"""
-test_auth.py
-Tests for authentication endpoints:
-- POST /auth/login
-- POST /auth/register
-- POST /auth/logout
-Covers happy paths, negative cases, and edge cases.
-"""
-
 import pytest
 import requests
 import os
