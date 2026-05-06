@@ -32,6 +32,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      
+      - name: Debug env vars
+        run: |
+          echo "TEST_USER_EMAIL is set: ${{ env.TEST_USER_EMAIL != '' }}"
+          echo "TEST_USER_PASSWORD is set: ${{ env.TEST_USER_PASSWORD != '' }}"
+          echo "BASE_URL is set: ${{ env.BASE_URL != '' }}"
+
       - name: Run test suite
         run: |
           pytest api_automation/ \
