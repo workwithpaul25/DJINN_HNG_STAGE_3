@@ -1,0 +1,47 @@
+name: CI — Run Test Suite
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  test:
+    name: pytest on Python 3.11
+    runs-on: ubuntu-latest
+
+    env:
+      BASE_URL:       ${{ secrets.BASE_URL }}
+      USER_EMAIL:     ${{ secrets.USER_EMAIL }}
+      USER_PASSWORD:  ${{ secrets.USER_PASSWORD }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run test suite
+        run: |
+          pytest api_automation/ \
+            -v \
+            --tb=short \
+            --junitxml=reports/junit-report.xml \
+            --html=reports/html-report.html \
+            --self-contained-html
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: reports/
+          retention-days: 14
